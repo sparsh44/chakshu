@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-@ak_0lq74p123b5-vfo#4d(f+2blknu2(&cz4c28or3g!cs^pq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "chakshu.onrender.com"]
 
 
 # Application definition
@@ -57,8 +57,6 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
-
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 ROOT_URLCONF = "chakshu.urls"
 
