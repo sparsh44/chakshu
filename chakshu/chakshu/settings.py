@@ -58,6 +58,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
 ROOT_URLCONF = "chakshu.urls"
 
 TEMPLATES = [
