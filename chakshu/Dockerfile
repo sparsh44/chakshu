@@ -8,14 +8,14 @@ WORKDIR /app
 RUN pip install --upgrade pip poetry
 
 # Copy only the necessary files for dependency installation
-COPY chakshu/pyproject.toml chakshu/poetry.lock* chakshu/README.md /app/
+COPY pyproject.toml poetry.lock README.md /app/
 
 # Project initialization
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi --no-root
 
 # Copy the rest of the application code
-COPY chakshu /app/chakshu
+COPY . /app
 
 # Run the application
-CMD ["python", "chakshu/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
